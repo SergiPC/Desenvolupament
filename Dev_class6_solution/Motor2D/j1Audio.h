@@ -50,7 +50,6 @@ public:
 	bool PlayFx(unsigned int fx, int repeat = 0);
 
 public:
-
 	int					volume_value;
 	bool				mute;
 	bool				just_muted;

@@ -29,7 +29,7 @@ bool j1Map::Awake(pugi::xml_node& config)
 
 void j1Map::Draw()
 {
-	if(map_loaded == false)
+	if (map_loaded == false)
 		return;
 
 	// TODO 5: Prepare the loop to draw all tilesets + Blit
@@ -91,7 +91,7 @@ iPoint j1Map::WorldToMap(int x, int y) const
 {
 	iPoint ret(0,0);
 
-	if(data.type == MAPTYPE_ORTHOGONAL)
+	if (data.type == MAPTYPE_ORTHOGONAL)
 	{
 		if (x < 0)
 			ret.x = (x / data.tile_width) - 1;
@@ -103,9 +103,9 @@ iPoint j1Map::WorldToMap(int x, int y) const
 		else
 			ret.y = y / data.tile_height;
 	}
-	
-	else if(data.type == MAPTYPE_ISOMETRIC)
-	{		
+
+	else if (data.type == MAPTYPE_ISOMETRIC)
+	{
 		/*
 		//float half_width = data.tile_width * 0.5f;
 		//float half_height = data.tile_height * 0.5f;
@@ -122,7 +122,7 @@ iPoint j1Map::WorldToMap(int x, int y) const
 		else
 			ret.x = int((x / half_width) + (y / half_height));
 
-		if (x > (2 * y))
+		if (x >(2 * y))
 			ret.y = int(((y / half_height) - (x / half_width)) - 1);
 		else
 			ret.y = int((y / half_height) - (x / half_width));

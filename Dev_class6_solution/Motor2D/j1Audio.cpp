@@ -105,7 +105,6 @@ bool j1Audio::CleanUp()
 	return true;
 }
 
-
 // Load Game State
 bool j1Audio::Load(pugi::xml_node& data)
 {
