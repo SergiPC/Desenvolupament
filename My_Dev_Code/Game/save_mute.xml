@@ -1,0 +1,9 @@
+<!-- Save mute_volume for the game -->
+
+<game_mute>
+
+  <mute_audio>
+    <mute_volume value="0"/>
+  </mute_audio>
+
+</game_mute>
